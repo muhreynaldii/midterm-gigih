@@ -2,7 +2,7 @@
 
 ## Database Structure
 
-![Alt text](image-1.png)
+![Alt text](image.png)
 
 ## API Structure and Response
 
