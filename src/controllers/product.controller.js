@@ -1,10 +1,10 @@
-const Product = require("../models/product.model");
+const models = require("../models");
 
 const getProductListByVideoId = async (req, res) => {
   const { videoId } = req.params;
 
   try {
-    const products = await Product.find({ videoID: videoId });
+    const products = await models.Product.find({ videoId: videoId });
 
     res.status(200).json(products);
   } catch (error) {

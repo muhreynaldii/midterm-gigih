@@ -1,8 +1,8 @@
-const Video = require("../models/video.model");
+const models = require("../models");
 
 const getVideoThumbnailList = async (req, res) => {
   try {
-    const videos = await Video.find({});
+    const videos = await models.Video.find({});
 
     const videoList = videos.map((video) => {
       return {

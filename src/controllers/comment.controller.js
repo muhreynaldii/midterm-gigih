@@ -1,8 +1,8 @@
-const Comment = require("../models/comment.model");
+const models = require("../models");
 
 const getCommentListByVideoId = async (req, res) => {
   try {
-    const comments = await Comment.find({ videoID: videoId });
+    const comments = await models.Comment.find({ videoId: videoId });
 
     res.status(200).json(comments);
   } catch (error) {
@@ -16,8 +16,8 @@ const submitComment = async (req, res) => {
   const { username, comment, videoId } = req.body;
 
   try {
-    const newComment = new Comment({
-      videoID: videoId,
+    const newComment = new models.Comment({
+      videoId: videoId,
       username: username,
       comment: comment,
     });
