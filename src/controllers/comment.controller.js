@@ -1,6 +1,7 @@
 const models = require("../models");
 
 const getCommentListByVideoId = async (req, res) => {
+  const { videoId } = req.params;
   try {
     const comments = await models.Comment.find({ videoId: videoId });
 

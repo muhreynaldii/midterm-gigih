@@ -7,6 +7,7 @@ const getVideoThumbnailList = async (req, res) => {
     const videoList = videos.map((video) => {
       return {
         title: video.title,
+        description: video.description,
         urlThumbnail: video.urlThumbnail,
       };
     });
